@@ -5,7 +5,7 @@ WriteMakefile(
     PREREQ_PM => {
 		'Pod::Coverage' => 0.11,
 		'Module::Info' => 0.12,
-		'Test::More' => 0.41,
+		'Test::More' => 0.42,
 		'IO::File' => 1.08,
 	    },
         ($] >= 5.005 ?    ## Add these new keywords supported since 5.005

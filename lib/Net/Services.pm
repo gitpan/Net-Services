@@ -23,7 +23,7 @@ use strict;
 use warnings;
 use IO::File;
 
-our ( $VERSION ) = '$Revision: 1.2 $ ' =~ /\$Revision:\s+([^\s]+)/;
+our ( $VERSION ) = '$Revision: 1.3 $ ' =~ /\$Revision:\s+([^\s]+)/;
 
 my $etc = '/etc/services';
 
@@ -39,7 +39,7 @@ while (<$input>)
     chomp;
     s/\s*#.*$//;
     next if /^\s*$/;
-    die "Inappropriate line: $.\n[$_]\n" unless m/^
+    next unless m/^
 	\s*
 	([\w.+-]+)
 	\s+
@@ -205,7 +205,7 @@ Copyright (c) 2002 Iain Truskett. All rights reserved. This program
 is free software; you can redistribute it and/or modify it under the
 same terms as Perl itself.
 
-    $Id: Services.pm,v 1.2 2002/03/06 07:01:00 koschei Exp $
+    $Id: Services.pm,v 1.3 2002/03/23 15:56:44 koschei Exp $
 
 =head1 ACKNOWLEDGEMENTS
 
