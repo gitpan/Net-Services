@@ -1,0 +1,41 @@
+NAME
+    Net::Services - tied interface to the /etc/services file
+
+SYNOPSIS
+        use Net::Services;
+        tie my %services, 'Net::Services';
+
+        print "Port 23 is $services{23}\n";
+        print qq[Port 23 tcp is $services{"23-tcp"}\n];
+
+DESCRIPTION
+    Constructs a hash from the /etc/services file and provides a tied
+    interface to it that takes care of things like the protocol name.
+
+AUTHOR
+    Iain Truskett <spoon@cpan.org> <http://eh.org/~koschei/>
+
+    Please report any bugs, or post any suggestions, to either the
+    mailing list at <cpan@dellah.anu.edu.au> (email
+    <cpan-subscribe@dellah.anu.edu.au> to subscribe) or directly to the
+    author at <spoon@cpan.org>
+
+BUGS
+    None known at present.
+
+PLANS
+    None at present.
+
+COPYRIGHT
+    Copyright (c) 2002 Iain Truskett. All rights reserved. This program
+    is free software; you can redistribute it and/or modify it under the
+    same terms as Perl itself.
+
+        $Id: Services.pm,v 1.2 2002/03/06 07:01:00 koschei Exp $
+
+ACKNOWLEDGEMENTS
+    Yeah. Hmm.
+
+SEE ALSO
+    Um.
+
